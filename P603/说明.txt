@@ -1,0 +1,19 @@
+接口Comparable
+　　我们在字符串中见到过CompareTo方法,知道这个方法是用于
+比较字符串顺序的,根据字典顺序进行排序。Java中很多类也都有C
+ompareTo方法，甚至于排序算法的底层组成也是依赖于比较的，
+而这个比较就是依赖于各种数据类型的CompareTo或者Compare
+方法。Java中所有的compareTo方法都源于一个接口，那就是
+Comparable。这个接口只有一个方法，那就是CompareTo。
+所有想要具有比较功能的类，都建议实现这个接口，而非是自己定义这个功能，
+这是面向对象的概念（将具有相同功能的事物抽象到一个共同的类或接口）
+，并且为了多态也建议通过实现接口来进行向上转型，通过接口来操作具体实
+现，这也是面向接口编程要求我们做的。下面我们来具体了解一下Comparable接口。
+
+
+
+Cloneable接口的作用：
+
+? ? Object类中的clone()是protected的方法，在没有重写Object的clone()方法且没有实现Cloneable接口的实例上调用clone方法，会报CloneNotSupportedException异常。
+
+? ? 实现Cloneable接口仅仅是用来指示Object类中的clone()方法可以用来合法的进行克隆，即实现了Cloneable接口在调用Object的clone方法时不会再报CloneNotSupportedException异常。?
